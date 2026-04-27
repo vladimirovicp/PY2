@@ -1,0 +1,146 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 101
+        length: 110
+        placeholder_text: |-
+          # TODO Перепишите под защищенные атрибуты _name, _author
+                  self.name = name
+                  self.author = author
+        initial_state:
+          length: 110
+          offset: 101
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          self._name = name
+                  self._author = author
+        selected: false
+        status: Unchecked
+      - offset: 217
+        length: 63
+        placeholder_text: "#  TODO Создайте свойство для имени и автора, только для чт\
+      ения"
+        initial_state:
+          length: 63
+          offset: 217
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def name(self):
+                  return self._name
+          
+              @property
+              def author(self):
+                      return self._author
+        selected: false
+        status: Unchecked
+      - offset: 492
+        length: 32
+        placeholder_text: ":  # TODO Отнаследуйтесь от Book"
+        initial_state:
+          length: 32
+          offset: 492
+        initialized_from_dependency: false
+        encrypted_possible_answer: "(Book):"
+        selected: false
+        status: Unchecked
+      - offset: 593
+        length: 143
+        placeholder_text: |-
+          # TODO  Перепишите с учетом наследования атрибутов от родителя
+                  self.name = name
+                  self.author = author
+                  self.pages = pages
+        initial_state:
+          length: 143
+          offset: 593
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          super().__init__(name, author)
+                  self.pages = pages
+        selected: false
+        status: Unchecked
+      - offset: 742
+        length: 74
+        placeholder_text: "# TODO Напишите свойства для pages с проверками при присвое\
+      нии им значений"
+        initial_state:
+          length: 74
+          offset: 742
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          @property
+              def pages(self):
+                  return self._pages
+          
+              @pages.setter
+              def pages(self, value: int):
+                  if not isinstance(value, int):
+                      raise TypeError('Неверный тип, нужно int')
+                  if value <= 0:
+                      raise ValueError('Значение должно быть больше 0')
+                  self._pages = value
+        selected: false
+        status: Unchecked
+      - offset: 822
+        length: 33
+        placeholder_text: "# TODO Перегрузите метод __repr__"
+        initial_state:
+          length: 33
+          offset: 822
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          def __repr__(self):
+                  return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, pages={self.pages})"
+        selected: false
+        status: Unchecked
+      - offset: 858
+        length: 257
+        placeholder_text: |-
+          # TODO  Проведите аналогичные необходимые действия согласно заданию для класса AudioBook
+          class AudioBook:
+              def __init__(self, name: str, author: str, duration: float):
+                  self.name = name
+                  self.author = author
+                  self.duration = duration
+        initial_state:
+          length: 257
+          offset: 858
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          class AudioBook(Book):
+              def __init__(self, name: str, author: str, duration: float):
+                  super().__init__(name, author)
+                  self.duration = duration
+          
+              @property
+              def duration(self):
+                  return self._duration
+          
+              @duration.setter
+              def duration(self, value: float):
+                  if not isinstance(value, float):
+                      raise TypeError('Неверный тип, нужно float')
+                  if value <= 0:
+                      raise ValueError('Значение должно быть больше 0')
+                  self._duration = value
+          
+              def __repr__(self):
+                  return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, duration={self.duration})"
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
+solution_hidden: true

@@ -1,0 +1,256 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 426
+        length: 52
+        placeholder_text: "...  # TODO Реализуйте проверку, что title не пустое"
+        initial_state:
+          length: 52
+          offset: 426
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not title.strip():
+                      raise ValueError("Название задачи не может быть пустым")
+        selected: false
+        status: Unchecked
+      - offset: 488
+        length: 48
+        placeholder_text: "...  # TODO Создайте атрибут title и description"
+        initial_state:
+          length: 48
+          offset: 488
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          self.title = title.strip()
+                  self.description = description.strip()
+        selected: false
+        status: Unchecked
+      - offset: 545
+        length: 50
+        placeholder_text: "...  # TODO Создайте атрибуты is_done и created_at"
+        initial_state:
+          length: 50
+          offset: 545
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          self.is_done = False  # Метка выполнения задачи
+                  self.created_at = datetime.now()  # Атрибут для сохранения времени создания задачи
+        selected: false
+        status: Unchecked
+      - offset: 688
+        length: 95
+        placeholder_text: "... # TODO Отметьте задачу как выполненную, используйте атр\
+      ибут is_done и переведите его в True"
+        initial_state:
+          length: 95
+          offset: 688
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.is_done = True
+        selected: false
+        status: Unchecked
+      - offset: 880
+        length: 58
+        placeholder_text: "return ''  # TODO Реализуйте понятный вывод статуса задачи"
+        initial_state:
+          length: 58
+          offset: 880
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          status = "[X]" if self.is_done else "[ ]"
+                  return f"{status} {self.title}"
+        selected: false
+        status: Unchecked
+      - offset: 2026
+        length: 77
+        placeholder_text: "...  # TODO Создайте атрибут filename со значением имени фа\
+      йла для сохранения"
+        initial_state:
+          length: 77
+          offset: 2026
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.filename = filename
+        selected: false
+        status: Unchecked
+      - offset: 2112
+        length: 51
+        placeholder_text: "...  # TODO Создайте атрибут tasks с пустым списком"
+        initial_state:
+          length: 51
+          offset: 2112
+        initialized_from_dependency: false
+        encrypted_possible_answer: "self.tasks: list[Task] = []"
+        selected: false
+        status: Unchecked
+      - offset: 2172
+        length: 69
+        placeholder_text: "...  # TODO Вызовите метод load_from_file для загрузки данн\
+      ых с файла"
+        initial_state:
+          length: 69
+          offset: 2172
+        initialized_from_dependency: false
+        encrypted_possible_answer: self.load_from_file()
+        selected: false
+        status: Unchecked
+      - offset: 2335
+        length: 105
+        placeholder_text: "...  # TODO Реализуйте код по сохранению задач в файл форма\
+      та json с названием файла из атрибута filename"
+        initial_state:
+          length: 105
+          offset: 2335
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          try:
+                      data = [task.to_dict() for task in self.tasks]
+                      with open(self.filename, 'w', encoding='utf-8') as f:
+                          json.dump(data, f, ensure_ascii=False, indent=2)
+                  except Exception as e:
+                      print(f"Ошибка при сохранении файла: {e}")
+        selected: false
+        status: Unchecked
+      - offset: 2534
+        length: 92
+        placeholder_text: "...  # TODO Реализуйте код загрузки данных с файла. Помните\
+      , что файла может не существовать"
+        initial_state:
+          length: 92
+          offset: 2534
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          try:
+                      with open(self.filename, 'r', encoding='utf-8') as f:
+                          data = json.load(f)
+                          self.tasks = [Task.from_dict(item) for item in data]
+                      print(f"Загружено {len(self.tasks)} задач из файла")
+                  except FileNotFoundError:
+                      print("Файл с задачами не найден. Будет создан новый.")
+                  except Exception as e:
+                      print(f"Ошибка при загрузке файла: {e}")
+        selected: false
+        status: Unchecked
+      - offset: 2821
+        length: 25
+        placeholder_text: "... # TODO Реализуйте код"
+        initial_state:
+          length: 25
+          offset: 2821
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          self.tasks.append(task)
+                  self.save_to_file()
+                  print(f"Задача добавлена: {task.title}")
+        selected: false
+        status: Unchecked
+      - offset: 3030
+        length: 25
+        placeholder_text: "... # TODO Реализуйте код"
+        initial_state:
+          length: 25
+          offset: 3030
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not self.tasks:
+                      print("Список задач пуст!")
+                      return
+          
+                  print("\nВаш список задач:")
+                  for i, task in enumerate(self.tasks, 1):
+                      print(f"{i}. {task}")
+        selected: false
+        status: Unchecked
+      - offset: 3348
+        length: 25
+        placeholder_text: "... # TODO Реализуйте код"
+        initial_state:
+          length: 25
+          offset: 3348
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if index < 1 or index > len(self.tasks):
+                      raise IndexError("Неверный номер задачи")
+          
+                  task = self.tasks[index - 1]
+                  task.mark_as_done()
+                  self.save_to_file()
+                  print(f"Задача отмечена как выполненная: {task.title}")
+        selected: false
+        status: Unchecked
+      - offset: 3656
+        length: 25
+        placeholder_text: "... # TODO Реализуйте код"
+        initial_state:
+          length: 25
+          offset: 3656
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if index < 1 or index > len(self.tasks):
+                      raise IndexError("Неверный номер задачи")
+          
+                  task = self.tasks.pop(index - 1)
+                  self.save_to_file()
+                  print(f"Задача удалена: {task.title}")
+        selected: false
+        status: Unchecked
+      - offset: 4324
+        length: 93
+        placeholder_text: "... # TODO Реализуйте логику добавления объекта задачи в об\
+      ъект todo (объект менеджера задач)"
+        initial_state:
+          length: 93
+          offset: 4324
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          try:
+                          task = Task(title, description)
+                          todo.add_task(task)
+                      except ValueError as e:
+                          print(f"Ошибка: {e}")
+        selected: false
+        status: Unchecked
+      - offset: 4489
+        length: 33
+        placeholder_text: "...  # TODO Реализуйте функционал"
+        initial_state:
+          length: 33
+          offset: 4489
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          todo.list_tasks()
+                      try:
+                          index = int(input("Номер задачи для отметки: "))
+                          todo.mark_task_done(index)
+                      except (ValueError, IndexError) as e:
+                          print(f"Ошибка: {e}")
+        selected: false
+        status: Unchecked
+      - offset: 4581
+        length: 33
+        placeholder_text: "...  # TODO Реализуйте функционал"
+        initial_state:
+          length: 33
+          offset: 4581
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          todo.list_tasks()
+                      try:
+                          index = int(input("Номер задачи для удаления: "))
+                          todo.remove_task(index)
+                      except (ValueError, IndexError) as e:
+                          print(f"Ошибка: {e}")
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1

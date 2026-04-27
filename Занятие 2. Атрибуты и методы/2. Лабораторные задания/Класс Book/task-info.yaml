@@ -1,0 +1,51 @@
+type: output
+files:
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 62
+        length: 105
+        placeholder_text: "pass  # TODO Инициализировать экземплярные атрибуты (не заб\
+      ываем что они создаются с использованием self)"
+        initial_state:
+          length: 105
+          offset: 62
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          self.id = id_
+                  self.name = name
+                  self.pages = pages
+        selected: false
+        status: Unchecked
+      - offset: 200
+        length: 57
+        placeholder_text: "pass  # TODO Вернуть строку типа \"Книга 'название книги'\""
+        initial_state:
+          length: 57
+          offset: 200
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return f\"Книга {self.name!r}\""
+        selected: false
+        status: Unchecked
+      - offset: 291
+        length: 97
+        placeholder_text: "pass  # TODO Вернуть строку представления объекта типа Book(id_=1,\
+      \ name='test_name_1', pages=200)"
+        initial_state:
+          length: 97
+          offset: 291
+        initialized_from_dependency: false
+        encrypted_possible_answer: "return f\"{self.__class__.__name__}(id_={self.id},\
+      \ name={self.name!r}, pages={self.pages})\""
+        selected: false
+        status: Unchecked
+    learner_created: false
+status: Unchecked
+record: -1
+solution_hidden: true
