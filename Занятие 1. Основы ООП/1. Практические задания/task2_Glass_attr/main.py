@@ -30,10 +30,16 @@ if __name__ == "__main__":
     print(glass1.capacity_volume, glass1.occupied_volume)
 
     # TODO инициализировать ещё один стакан со значениями 200, 150
+
+    glass2 = Glass(200,150)
+
     # TODO  распечатать атрибут capacity_volume, occupied_volume экземпляра glass2
 
+    print(glass2.capacity_volume, glass2.occupied_volume)
     print("Доливаем воды в первый стакан...")
     # TODO доливаем 50 единиц воды в первый стакан (за счет добавления значения к значению соответствующего атрибута)
+
+    glass1.occupied_volume += 50
 
     print(glass1.capacity_volume, glass1.occupied_volume)
     print(glass2.capacity_volume, glass2.occupied_volume)
@@ -41,4 +47,4 @@ if __name__ == "__main__":
     assert glass1.capacity_volume == glass2.capacity_volume  # Проверяем, что объемы стаканов одинаковые (иначе будет ошибка)
     assert glass1.occupied_volume == glass2.occupied_volume  # Проверяем, что стаканы заполнены одинаково (иначе будет ошибка)
 
-    print(...)  # TODO сравнить id объектов (должно вернуть True или False)
+    print(glass1 is glass2)  # TODO сравнить id объектов (должно вернуть True или False)

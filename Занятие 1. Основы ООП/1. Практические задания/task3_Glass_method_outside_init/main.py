@@ -24,7 +24,7 @@ class Glass:
 
 
 if __name__ == "__main__":
-    glass = ...  # TODO инициализировать экземпляр класса Glass с объемом 200 и количеством жидкости 100
+    glass = Glass(200, 100)  # TODO инициализировать экземпляр класса Glass с объемом 200 и количеством жидкости 100
 
-    print(...)  # TODO распечатать атрибут capacity_volume
-    print(...)  # TODO распечатать атрибут occupied_volume
+    print(glass.capacity_volume)  # TODO распечатать атрибут capacity_volume
+    print(glass.occupied_volume)  # TODO распечатать атрибут occupied_volume
