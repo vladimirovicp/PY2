@@ -24,11 +24,36 @@ class Glass:
         self.occupied_volume = occupied_volume  # объем жидкости в стакане
 
     def add_water(self, volume):
-        ...  # TODO Допишите метод. Не забываем про проверки
+        # TODO Допишите метод. Не забываем про проверки
+
+        if not isinstance(volume, (int, float)):
+            raise  TypeError("Добавляемый объём должен быть числом")
+
+        if volume < 0:
+            raise ValueError("Нельзя добавить отрицательный объём воды")
+
+
+
+        if (self.occupied_volume + volume) > self.capacity_volume:
+            raise ValueError("Недостаточно места в стакане")
+        else:
+            self.occupied_volume += volume
+
+
 
     def remove_water(self, volume):
-        ...  # TODO Допишите метод. Не забываем про проверки
+        # TODO Допишите метод. Не забываем про проверки
 
+        if not isinstance(volume, (int, float)):
+            raise  TypeError("Удаляемый объём должен быть числом")
+
+        if volume < 0:
+            raise ValueError("Нельзя удалить отрицательный объём воды")
+
+        if (self.occupied_volume - volume) < 0:
+            raise ValueError("Нельзя вылить больше воды, чем есть в стакане")
+        else:
+            self.occupied_volume -= volume
 
 if __name__ == "__main__":
     glass = Glass(200, 100)
