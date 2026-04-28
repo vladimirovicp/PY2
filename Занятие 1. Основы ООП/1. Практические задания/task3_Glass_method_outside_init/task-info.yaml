@@ -39,7 +39,7 @@ files:
         selected: false
         status: Solved
       - offset: 970
-        length: 104
+        length: 92
         placeholder_text: "...  # TODO инициализировать экземпляр класса Glass с объем\
       ом 200 и количеством жидкости 100"
         initial_state:
@@ -49,25 +49,25 @@ files:
         encrypted_possible_answer: "Glass(200, 100)"
         selected: false
         status: Solved
-      - offset: 1086
-        length: 66
+      - offset: 1074
+        length: 48
         placeholder_text: "...)  # TODO распечатать атрибут capacity_volume"
         initial_state:
           length: 48
           offset: 1074
         initialized_from_dependency: false
         encrypted_possible_answer: glass.capacity_volume)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1163
-        length: 66
+      - offset: 1133
+        length: 48
         placeholder_text: "...)  # TODO распечатать атрибут occupied_volume"
         initial_state:
           length: 48
           offset: 1133
         initialized_from_dependency: false
         encrypted_possible_answer: glass.occupied_volume)
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -79,5 +79,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 28 Apr 2026 10:25:45 UTC"
+  time: "Tue, 28 Apr 2026 16:09:13 UTC"
 record: -1

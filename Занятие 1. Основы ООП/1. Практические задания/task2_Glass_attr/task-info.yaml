@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 1176
-        length: 92
+        length: 62
         placeholder_text: "# TODO инициализировать ещё один стакан со значениями 200,\
       \ 150"
         initial_state:
@@ -12,9 +12,9 @@ files:
           offset: 1176
         initialized_from_dependency: false
         encrypted_possible_answer: "glass2 = Glass(200, 150)"
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1273
+      - offset: 1243
         length: 78
         placeholder_text: "# TODO  распечатать атрибут capacity_volume, occupied_volume\
       \ экземпляра glass2"
@@ -23,9 +23,9 @@ files:
           offset: 1243
         initialized_from_dependency: false
         encrypted_possible_answer: "print(glass2.capacity_volume, glass2.occupied_volume)"
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1461
+      - offset: 1373
         length: 113
         placeholder_text: "# TODO доливаем 50 единиц воды в первый стакан (за счет доб\
       авления значения к значению соответствующего атрибута)"
@@ -36,8 +36,8 @@ files:
         encrypted_possible_answer: glass1.occupied_volume += 50
         selected: false
         status: Solved
-      - offset: 1991
-        length: 16
+      - offset: 1869
+        length: 3
         placeholder_text: '...'
         initial_state:
           length: 3
@@ -59,5 +59,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 28 Apr 2026 08:42:58 UTC"
+  time: "Tue, 28 Apr 2026 16:08:43 UTC"
 record: -1

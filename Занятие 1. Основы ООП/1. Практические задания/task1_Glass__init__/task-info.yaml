@@ -3,7 +3,7 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 1300
+      - offset: 1298
         length: 145
         placeholder_text: "# TODO создайте атрибут capacity_volume и occupied_volume О\
       бязательно проверяйте типы (TypeError) и значения передаваемых аргументов (ValueError)"
@@ -28,7 +28,7 @@ files:
                   self.occupied_volume = occupied_volume  # объем жидкости в стакане
         selected: false
         status: Solved
-      - offset: 2129
+      - offset: 1477
         length: 60
         placeholder_text: "# TODO инициализировать два объекта от класса Стакан (Glass)"
         initial_state:
@@ -40,15 +40,15 @@ files:
               glass2 = Glass(200, 150)
         selected: false
         status: Solved
-      - offset: 2464
-        length: 119
+      - offset: 1556
+        length: 50
         placeholder_text: "...  # TODO инициализировать не корректные объекты"
         initial_state:
           length: 50
           offset: 582
         initialized_from_dependency: false
         encrypted_possible_answer: "Glass(-200, 100)"
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -63,5 +63,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 28 Apr 2026 08:17:24 UTC"
+  time: "Tue, 28 Apr 2026 16:07:18 UTC"
 record: -1
