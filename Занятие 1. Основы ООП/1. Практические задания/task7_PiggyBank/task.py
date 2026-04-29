@@ -1,3 +1,5 @@
+from collections import Counter
+
 class Coin:
     def __init__(self, denomination: float):
         """
@@ -6,6 +8,9 @@ class Coin:
         :param denomination: Номинал монеты.
         """
         self.denomination = denomination
+
+    def __repr__(self):
+        return f"Coin({self.denomination})"
 
 
 class PiggyBank:
@@ -22,7 +27,14 @@ class PiggyBank:
 
         :param coin: Объект Coin для добавления.
         """
-        ...  # TODO реализуйте метод как в описании
+        # TODO реализуйте метод как в описании
+
+        if not (self.is_broken):
+            self.coins.append(coin)
+        else:
+            raise ValueError("Копилка разбита. Нельзя добавить монеты.")
+
+
 
     def break_piggy_bank(self):
         """
@@ -30,8 +42,43 @@ class PiggyBank:
 
         :return: Словарь, где ключ - номинал монеты, значение - количество монет этого номинала.
         """
-        ...  # TODO реализуйте метод как в описании
+        # TODO реализуйте метод как в описании
 
+        if(self.is_broken):
+            raise ValueError("Копилка уже разбита.")
+
+
+        #print(self.coins)
+        # print(len(self.coins)) # cумма монет
+        total_sum = sum(coin.denomination for coin in self.coins)
+        print(total_sum)
+
+        # result = dict(Counter(self.coins))
+        result ={}
+        for coin in self.coins:
+            if coin.denomination in result:
+                result[coin.denomination] += 1
+            else:
+                result[coin.denomination] = 1
+
+
+        self.coins = []
+        # self.coins.clear()
+        self.is_broken = True
+
+        return result
+
+
+
+# piggy_bank = PiggyBank()
+# coin1 = Coin(1.0)
+# coin2 = Coin(0.5)
+#
+# piggy_bank.add_coin(coin1)
+# piggy_bank.add_coin(coin2)
+# piggy_bank.add_coin(coin1)
+#
+# piggy_bank.break_piggy_bank()
 
 if __name__ == "__main__":
     # Создаем копилку
