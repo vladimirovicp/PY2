@@ -3,8 +3,8 @@ files:
   - name: task.py
     visible: true
     placeholders:
-      - offset: 608
-        length: 197
+      - offset: 1558
+        length: 43
         placeholder_text: "...  # TODO реализуйте метод как в описании"
         initial_state:
           length: 43
@@ -14,10 +14,10 @@ files:
           if self.is_broken:
                       raise ValueError("Копилка разбита. Нельзя добавить монеты.")
                   self.coins.append(coin)
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1030
-        length: 648
+      - offset: 1826
+        length: 43
         placeholder_text: "...  # TODO реализуйте метод как в описании"
         initial_state:
           length: 43
@@ -41,7 +41,7 @@ files:
           
                   print(f"Общая сумма монет: {total_amount}")
                   return coin_count
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: tests/test_task.py
@@ -56,5 +56,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Wed, 29 Apr 2026 08:39:31 UTC"
+  time: "Thu, 30 Apr 2026 08:40:28 UTC"
 record: -1

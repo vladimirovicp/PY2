@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 538
-        length: 37
+        length: 3993
         placeholder_text: "# TODO Создайте свой класс по заданию"
         initial_state:
           length: 37
@@ -91,8 +91,8 @@ files:
                   if not 0 < water <= self.occupied_volume:
                       raise ValueError("Убираемый объем жидкости должен быть положительным числом и не более занятого объема")
                   self.occupied_volume -= water
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -103,6 +103,9 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 30 Apr 2026 09:56:28 UTC"
 record: -1
 solution_hidden: true
