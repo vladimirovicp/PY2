@@ -1,0 +1,72 @@
+type: output
+files:
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    learner_created: false
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 214
+        length: 46
+        placeholder_text: "books):  # TODO сделайте аргумент по умолчанию"
+        initial_state:
+          length: 46
+          offset: 214
+        initialized_from_dependency: false
+        encrypted_possible_answer: "books:list[Book]|None=None):"
+        selected: false
+        status: Unchecked
+      - offset: 517
+        length: 64
+        placeholder_text: "pass  # TODO Реализуйте инициализацию аргумента books по за\
+      данию"
+        initial_state:
+          length: 64
+          offset: 517
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if books is None:
+                      self.books = []
+                  else:
+                      self.books = books
+        selected: false
+        status: Unchecked
+      - offset: 809
+        length: 72
+        placeholder_text: "pass  # TODO Реализуйте получение следующего id у книги сог\
+      ласно заданию"
+        initial_state:
+          length: 72
+          offset: 809
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          if not self.books:
+                      return 1
+                  return self.books[-1].id + 1
+        selected: false
+        status: Unchecked
+      - offset: 1296
+        length: 88
+        placeholder_text: "pass  # TODO Реализуйте получение индекса книги в библиотек\
+      е по его id_ согласно заданию"
+        initial_state:
+          length: 88
+          offset: 1296
+        initialized_from_dependency: false
+        encrypted_possible_answer: |-
+          for idx, book in enumerate(self.books):
+                      if book.id == id_:
+                          return idx
+                  raise ValueError("Книги с запрашиваемым id не существует")
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: utils.py
+    visible: true
+    learner_created: false
+status: Unchecked
+record: -1
+solution_hidden: true
