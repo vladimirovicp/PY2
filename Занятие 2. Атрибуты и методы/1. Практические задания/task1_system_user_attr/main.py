@@ -24,5 +24,6 @@ if __name__ == "__main__":
     print(glass.__init__.__annotations__)  # Если хотим посмотреть аннотацию в методе (если она указана, для примера
     # взят __init__, так как это пока единственный доступный метод класса), то всегда пишем название метода,
     # затем __annotations__
-    print(glass.__annotations__)  # Позволяет узнать аннотацию классовых атрибутов. Аналогично Glass.__annotations__
-
+    # print(glass.__annotations__)  # Позволяет узнать аннотацию классовых атрибутов. Аналогично Glass.__annotations__
+    print(type(glass).__annotations__)
+    print(glass.__class__.__annotations__)
