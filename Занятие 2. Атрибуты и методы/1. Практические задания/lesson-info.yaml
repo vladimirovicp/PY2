@@ -1,7 +1,6 @@
 content:
   - task1_system_user_attr
   - task2_Glass__dict__
-  - task3_Glass__class__
   - task4_Glass__str__
   - task5_Glass__repr__
   - task6_Glass__class__name__

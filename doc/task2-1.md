@@ -158,3 +158,30 @@ if __name__ == "__main__":
     print([Glass(i, i) for i in range(50, 251, 50)])  # [Glass(50, 50), Glass(100, 100), Glass(150, 150), Glass(200, 200), Glass(250, 250)]
 ```
 
+## 2.6
+
+Ранее рассматривали, что системный атрибут __class__ содержит в себе класс, экземпляром которого он является.
+А в __repr__ мы прописывали название класса, можно немного стандартизировать запись, чтобы не прописывать название класса, так как оно есть в __class__.__name__
+С помощью self.__class__.__name__ перепишите приведенный участок кода в __repr__
+
+```python
+from typing import Union
+
+
+class Glass:
+    def __init__(self, capacity_volume: Union[int, float], occupied_volume: Union[int, float]):
+        self.capacity_volume = capacity_volume  # объем стакана
+        self.occupied_volume = occupied_volume  # объем жидкости в стакане
+
+    def __repr__(self) -> str:
+        # return f"Glass({self.capacity_volume}, {self.occupied_volume})"
+
+        # TODO замените Glass на self.__class__.__name__
+        return f"{self.__class__.__name__}({self.capacity_volume}, {self.occupied_volume})"
+
+if __name__ == "__main__":
+    glass = Glass(200, 100)
+    print(glass)  # Glass(200, 100)
+```
+
+
