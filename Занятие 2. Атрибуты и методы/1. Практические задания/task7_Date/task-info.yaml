@@ -22,19 +22,19 @@ files:
                       raise TypeError('Неверный тип year')
                   self.year = year
         selected: false
-        status: Unchecked
-      - offset: 227
-        length: 54
+        status: Solved
+      - offset: 671
+        length: 116
         placeholder_text: "... # TODO Реализуйте возвращение в формате DD/MM/YYYY"
         initial_state:
           length: 54
           offset: 227
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.day:0>2}/{self.month:0>2}/{self.year:4}\""
-        selected: false
-        status: Unchecked
-      - offset: 315
-        length: 78
+        selected: true
+        status: Solved
+      - offset: 821
+        length: 172
         placeholder_text: "... # TODO Реализуйте возвращение в формате Date(day=..., month=...,\
       \ year=...)"
         initial_state:
@@ -43,8 +43,8 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.__class__.__name__}(day={self.day!r},\
       \ month={self.month!r}, year={self.year!r})\""
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -55,5 +55,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 06 May 2026 07:58:32 UTC"
 record: -1
