@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 22
-        length: 130
+        length: 61
         placeholder_text: "# TODO Написать статический метод add для сложения двух чис\
       ел"
         initial_state:
@@ -15,10 +15,10 @@ files:
           @staticmethod
               def add(a, b):
                   return a + b
-        selected: true
+        selected: false
         status: Solved
-      - offset: 158
-        length: 81
+      - offset: 89
+        length: 199
         placeholder_text: "# TODO  Написать статический метод mul для умножения двух ч\
       исел"
         initial_state:
@@ -29,7 +29,7 @@ files:
           @staticmethod
               def mul(a, b):
                   return a * b
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -44,5 +44,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Wed, 06 May 2026 08:35:32 UTC"
+  time: "Thu, 07 May 2026 17:03:16 UTC"
 record: -1

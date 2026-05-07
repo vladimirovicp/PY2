@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 520
-        length: 121
+        length: 518
         placeholder_text: "...  # TODO Реализовать метод проверки високосного года"
         initial_state:
           length: 55
@@ -14,10 +14,10 @@ files:
           if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
                       return True
                   return False
-        selected: true
+        selected: false
         status: Solved
-      - offset: 791
-        length: 344
+      - offset: 1188
+        length: 168
         placeholder_text: "...  # TODO используя атрибут класса DAY_OF_MONTH вернуть к\
       оличество дней в запрашиваемом месяце и году (учтите, что от високосного год\
       а меняется строка в DAY_OF_MONTH)"
@@ -29,10 +29,10 @@ files:
           if self.is_leap_year(year):
                       return self.DAY_OF_MONTH[1][month - 1]
                   return self.DAY_OF_MONTH[0][month - 1]
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1268
-        length: 331
+      - offset: 1489
+        length: 110
         placeholder_text: "...  # TODO Проверить валидность даты, если дата невалидная\
       \ вызвать ValueError, если валидная, то вернуть True"
         initial_state:
@@ -45,7 +45,7 @@ files:
                   if not 0 < month < 13:
                       raise ValueError("Неверное значение месяца")
                   return True
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -60,5 +60,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Wed, 06 May 2026 10:51:49 UTC"
+  time: "Thu, 07 May 2026 17:03:21 UTC"
 record: -1
