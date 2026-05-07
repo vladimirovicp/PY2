@@ -10,6 +10,8 @@ class Glass:
         return f"Стакан объёмом {self.capacity_volume}. Объём жидкости = {self.occupied_volume}"
 
     # TODO реализуйте метод __repr__
+    def __repr__(self) ->str:
+        return f"Glass({self.capacity_volume}, {self.occupied_volume})"
 
 
 if __name__ == "__main__":

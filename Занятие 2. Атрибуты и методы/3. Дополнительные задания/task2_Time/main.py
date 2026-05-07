@@ -10,10 +10,10 @@ class Time:
         return self.hour == other.hour and self.minute == other.minute
 
     def __lt__(self, other):
-        ...  # TODO реализуйте проверку "меньше"
+        return self.hour < other.hour and self.minute < other.minute  # TODO реализуйте проверку "меньше"
 
     def __le__(self, other):
-        ...  # TODO реализуйте проверку "меньше или равно"
+        return self.hour <= other.hour and self.minute <= other.minute  # TODO реализуйте проверку "меньше или равно"
 
 
 if __name__ == "__main__":

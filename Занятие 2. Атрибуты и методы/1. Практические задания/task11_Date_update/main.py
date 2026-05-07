@@ -17,15 +17,31 @@ class Date:
     @staticmethod
     def is_leap_year(year: int) -> bool:
         """Проверяет, является ли год високосным"""
-        ...  # TODO Реализовать метод проверки високосного года
+        # TODO Реализовать метод проверки високосного года
+
+        return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
     def get_max_day(self, month: int, year: int) -> int:
         """Возвращает максимальное количество дней в месяце для указанного года"""
-        ...  # TODO используя атрибут класса DAY_OF_MONTH вернуть количество дней в запрашиваемом месяце и году (учтите, что от високосного года меняется строка в DAY_OF_MONTH)
+         # TODO используя атрибут класса DAY_OF_MONTH вернуть количество дней в запрашиваемом месяце и году (учтите, что от високосного года меняется строка в DAY_OF_MONTH)
+
+        if Date.is_leap_year(year):
+            result = self.DAY_OF_MONTH[1][month - 1]
+        else:
+            result = self.DAY_OF_MONTH[0][month - 1]
+
+        return result
 
     def is_valid_date(self, day: int, month: int, year: int) -> bool:
         """Проверяет, является ли дата корректной"""
-        ...  # TODO Проверить валидность даты, если дата невалидная вызвать ValueError, если валидная, то вернуть True
+        # TODO Проверить валидность даты, если дата невалидная вызвать ValueError, если валидная, то вернуть True
+
+        if  not 0 < day < self.get_max_day(month, year) + 1:
+            raise ValueError('Не верно указан день')
+        if month < 1 or month > 12:
+            raise ValueError('Не верно указан месяц')
+
+        return True
 
     def __str__(self):
         return f"{self.day:0>2}/{self.month:0>2}/{self.year:4}"

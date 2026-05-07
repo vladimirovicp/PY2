@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 520
-        length: 55
+        length: 518
         placeholder_text: "...  # TODO Реализовать метод проверки високосного года"
         initial_state:
           length: 55
@@ -15,8 +15,8 @@ files:
                       return True
                   return False
         selected: false
-        status: Unchecked
-      - offset: 725
+        status: Solved
+      - offset: 1188
         length: 168
         placeholder_text: "...  # TODO используя атрибут класса DAY_OF_MONTH вернуть к\
       оличество дней в запрашиваемом месяце и году (учтите, что от високосного год\
@@ -30,8 +30,8 @@ files:
                       return self.DAY_OF_MONTH[1][month - 1]
                   return self.DAY_OF_MONTH[0][month - 1]
         selected: false
-        status: Unchecked
-      - offset: 1026
+        status: Solved
+      - offset: 1489
         length: 110
         placeholder_text: "...  # TODO Проверить валидность даты, если дата невалидная\
       \ вызвать ValueError, если валидная, то вернуть True"
@@ -46,7 +46,7 @@ files:
                       raise ValueError("Неверное значение месяца")
                   return True
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -57,5 +57,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 07 May 2026 17:03:21 UTC"
 record: -1

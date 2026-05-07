@@ -9,18 +9,18 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 214
-        length: 46
+      - offset: 267
+        length: 45
         placeholder_text: "books):  # TODO сделайте аргумент по умолчанию"
         initial_state:
           length: 46
           offset: 214
         initialized_from_dependency: false
         encrypted_possible_answer: "books:list[Book]|None=None):"
-        selected: false
-        status: Unchecked
-      - offset: 517
-        length: 64
+        selected: true
+        status: Solved
+      - offset: 569
+        length: 115
         placeholder_text: "pass  # TODO Реализуйте инициализацию аргумента books по за\
       данию"
         initial_state:
@@ -32,10 +32,10 @@ files:
                       self.books = []
                   else:
                       self.books = books
-        selected: false
-        status: Unchecked
-      - offset: 809
-        length: 72
+        selected: true
+        status: Solved
+      - offset: 1086
+        length: 0
         placeholder_text: "pass  # TODO Реализуйте получение следующего id у книги сог\
       ласно заданию"
         initial_state:
@@ -46,10 +46,10 @@ files:
           if not self.books:
                       return 1
                   return self.books[-1].id + 1
-        selected: false
-        status: Unchecked
-      - offset: 1296
-        length: 88
+        selected: true
+        status: Solved
+      - offset: 1492
+        length: 0
         placeholder_text: "pass  # TODO Реализуйте получение индекса книги в библиотек\
       е по его id_ согласно заданию"
         initial_state:
@@ -61,12 +61,15 @@ files:
                       if book.id == id_:
                           return idx
                   raise ValueError("Книги с запрашиваемым id не существует")
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: utils.py
     visible: true
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 07 May 2026 19:05:57 UTC"
 record: -1
 solution_hidden: true

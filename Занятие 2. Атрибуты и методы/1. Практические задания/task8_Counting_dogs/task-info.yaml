@@ -13,8 +13,8 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: total_dogs = 0
         selected: false
-        status: Unchecked
-      - offset: 327
+        status: Solved
+      - offset: 385
         length: 107
         placeholder_text: "# TODO Увеличьте значение классового атрибута, обратиться м\
       ожно через название класса (Dog.total_dogs += 1)"
@@ -24,8 +24,8 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: Dog.total_dogs += 1
         selected: false
-        status: Unchecked
-      - offset: 563
+        status: Solved
+      - offset: 621
         length: 142
         placeholder_text: "...  # TODO Верните значение классового атрибута, вспомните\
       , что когда работаем с классовым атрибутом то пишем cls, а не self (cls.total_dogs)"
@@ -35,7 +35,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: cls.total_dogs
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -46,5 +46,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 07 May 2026 17:03:09 UTC"
 record: -1
