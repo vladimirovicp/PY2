@@ -1,13 +1,17 @@
 class Book:
     def __init__(self, id_, name, pages):
         pass  # TODO Инициализировать экземплярные атрибуты (не забываем что они создаются с использованием self)
+        self.id_ = id_
+        self.name = name
+        self.pages = pages
 
     def __str__(self):
         pass  # TODO Вернуть строку типа "Книга 'название книги'"
+        return f"Книга '{self.name}'"
 
     def __repr__(self):
-        pass  # TODO Вернуть строку представления объекта типа Book(id_=1, name='test_name_1', pages=200)
-
+        #pass  # TODO Вернуть строку представления объекта типа Book(id_=1, name='test_name_1', pages=200)
+        return f"{self.__class__.__name__}(id_={self.id_}, name='{self.name}', pages={self.pages})"
 
 if __name__ == '__main__':
     # База данных книг для проверки

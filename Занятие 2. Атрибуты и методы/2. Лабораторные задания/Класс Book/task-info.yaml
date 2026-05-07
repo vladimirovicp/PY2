@@ -22,19 +22,19 @@ files:
                   self.name = name
                   self.pages = pages
         selected: false
-        status: Unchecked
-      - offset: 200
-        length: 57
+        status: Solved
+      - offset: 275
+        length: 95
         placeholder_text: "pass  # TODO Вернуть строку типа \"Книга 'название книги'\""
         initial_state:
           length: 57
           offset: 200
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"Книга {self.name!r}\""
-        selected: false
-        status: Unchecked
-      - offset: 291
-        length: 97
+        selected: true
+        status: Solved
+      - offset: 404
+        length: 98
         placeholder_text: "pass  # TODO Вернуть строку представления объекта типа Book(id_=1,\
       \ name='test_name_1', pages=200)"
         initial_state:
@@ -43,9 +43,12 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: "return f\"{self.__class__.__name__}(id_={self.id},\
       \ name={self.name!r}, pages={self.pages})\""
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 07 May 2026 18:11:38 UTC"
 record: -1
 solution_hidden: true
