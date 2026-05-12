@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 121
-        length: 122
+        length: 54
         placeholder_text: "# TODO создайте приватные атрибуты для пароля и адреса"
         initial_state:
           length: 54
@@ -13,20 +13,20 @@ files:
         encrypted_possible_answer: |-
           self.__password = password
                   self.__address = address
-        selected: true
+        selected: false
         status: Solved
-      - offset: 390
-        length: 114
+      - offset: 601
+        length: 41
         placeholder_text: "# TODO если роль 'admin', то вернуть True"
         initial_state:
           length: 41
           offset: 322
         initialized_from_dependency: false
         encrypted_possible_answer: return role == "admin"
-        selected: true
+        selected: false
         status: Solved
-      - offset: 560
-        length: 307
+      - offset: 698
+        length: 169
         placeholder_text: "...  # TODO провести проверку доступа по роли, если прошла\
       , то вернуть пароль, если не прошел проверку, то вызвать исключение PermissionError\
       \ с текстом 'Доступ запрещен'"
@@ -39,7 +39,7 @@ files:
                       return self.__password
                   else:
                       raise PermissionError("Доступ запрещен")
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -54,5 +54,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 12 May 2026 07:38:56 UTC"
+  time: "Tue, 12 May 2026 14:21:35 UTC"
 record: -1

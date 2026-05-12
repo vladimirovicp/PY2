@@ -4,14 +4,14 @@ files:
     visible: true
     placeholders:
       - offset: 202
-        length: 91
+        length: 60
         placeholder_text: "# TODO вызвать конструктор базового класса с помощью super()"
         initial_state:
           length: 60
           offset: 202
         initialized_from_dependency: false
         encrypted_possible_answer: super().__init__(name)
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -23,5 +23,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 12 May 2026 12:50:19 UTC"
+  time: "Tue, 12 May 2026 14:21:46 UTC"
 record: -1

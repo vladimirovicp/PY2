@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 293
-        length: 0
+      - offset: 157
+        length: 150
         placeholder_text: "...  # TODO допишите метод"
         initial_state:
           length: 26
@@ -15,17 +15,17 @@ files:
                       self._value += 1
                   else:
                       self._value = 0
-        selected: true
+        selected: false
         status: Solved
-      - offset: 335
-        length: 40
+      - offset: 349
+        length: 26
         placeholder_text: "...  # TODO допишите метод"
         initial_state:
           length: 26
           offset: 225
         initialized_from_dependency: false
         encrypted_possible_answer: return self._value
-        selected: true
+        selected: false
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -40,5 +40,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 12 May 2026 07:00:39 UTC"
+  time: "Tue, 12 May 2026 14:21:30 UTC"
 record: -1
