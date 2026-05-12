@@ -10,12 +10,26 @@ class Counter:
             self._value = 0
 
     # TODO перепишите get_value и сделайте его свойством (getter) value
-    def get_value(self) -> int:
+    @property
+    def value(self) -> int:
         return self._value
 
     # TODO  напишите свойство (getter) max_value
+    @property
+    def max_value(self):
+        return self._max_value
 
     # TODO  напишите свойство (setter) max_value с проверками на входной тип и значение
+
+    @max_value.setter
+    def max_value(self, max_val: int):
+        if not isinstance(max_val, int):
+            raise TypeError('Не верный тип max_value')
+
+        if max_val < 1:
+            raise ValueError('max_value меньше одного')
+
+        self._max_value = max_val
 
 
 if __name__ == "__main__":
