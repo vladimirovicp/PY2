@@ -4,7 +4,7 @@ files:
     visible: true
     placeholders:
       - offset: 426
-        length: 52
+        length: 115
         placeholder_text: "...  # TODO Реализуйте проверку, что title не пустое"
         initial_state:
           length: 52
@@ -13,10 +13,10 @@ files:
         encrypted_possible_answer: |-
           if not title.strip():
                       raise ValueError("Название задачи не может быть пустым")
-        selected: false
-        status: Unchecked
-      - offset: 488
-        length: 48
+        selected: true
+        status: Solved
+      - offset: 551
+        length: 132
         placeholder_text: "...  # TODO Создайте атрибут title и description"
         initial_state:
           length: 48
@@ -25,10 +25,10 @@ files:
         encrypted_possible_answer: |-
           self.title = title.strip()
                   self.description = description.strip()
-        selected: false
-        status: Unchecked
-      - offset: 545
-        length: 50
+        selected: true
+        status: Solved
+      - offset: 692
+        length: 169
         placeholder_text: "...  # TODO Создайте атрибуты is_done и created_at"
         initial_state:
           length: 50
@@ -37,10 +37,10 @@ files:
         encrypted_possible_answer: |-
           self.is_done = False  # Метка выполнения задачи
                   self.created_at = datetime.now()  # Атрибут для сохранения времени создания задачи
-        selected: false
-        status: Unchecked
-      - offset: 688
-        length: 95
+        selected: true
+        status: Solved
+      - offset: 954
+        length: 91
         placeholder_text: "... # TODO Отметьте задачу как выполненную, используйте атр\
       ибут is_done и переведите его в True"
         initial_state:
@@ -48,10 +48,10 @@ files:
           offset: 688
         initialized_from_dependency: false
         encrypted_possible_answer: self.is_done = True
-        selected: false
-        status: Unchecked
-      - offset: 880
-        length: 58
+        selected: true
+        status: Solved
+      - offset: 1219
+        length: 80
         placeholder_text: "return ''  # TODO Реализуйте понятный вывод статуса задачи"
         initial_state:
           length: 58
@@ -60,10 +60,10 @@ files:
         encrypted_possible_answer: |-
           status = "[X]" if self.is_done else "[ ]"
                   return f"{status} {self.title}"
-        selected: false
-        status: Unchecked
-      - offset: 2026
-        length: 77
+        selected: true
+        status: Solved
+      - offset: 2387
+        length: 98
         placeholder_text: "...  # TODO Создайте атрибут filename со значением имени фа\
       йла для сохранения"
         initial_state:
@@ -71,20 +71,20 @@ files:
           offset: 2026
         initialized_from_dependency: false
         encrypted_possible_answer: self.filename = filename
-        selected: false
-        status: Unchecked
-      - offset: 2112
-        length: 51
+        selected: true
+        status: Solved
+      - offset: 2494
+        length: 63
         placeholder_text: "...  # TODO Создайте атрибут tasks с пустым списком"
         initial_state:
           length: 51
           offset: 2112
         initialized_from_dependency: false
         encrypted_possible_answer: "self.tasks: list[Task] = []"
-        selected: false
-        status: Unchecked
-      - offset: 2172
-        length: 69
+        selected: true
+        status: Solved
+      - offset: 2566
+        length: 87
         placeholder_text: "...  # TODO Вызовите метод load_from_file для загрузки данн\
       ых с файла"
         initial_state:
@@ -92,10 +92,10 @@ files:
           offset: 2172
         initialized_from_dependency: false
         encrypted_possible_answer: self.load_from_file()
-        selected: false
-        status: Unchecked
-      - offset: 2335
-        length: 105
+        selected: true
+        status: Solved
+      - offset: 2747
+        length: 102
         placeholder_text: "...  # TODO Реализуйте код по сохранению задач в файл форма\
       та json с названием файла из атрибута filename"
         initial_state:
@@ -110,9 +110,9 @@ files:
                   except Exception as e:
                       print(f"Ошибка при сохранении файла: {e}")
         selected: false
-        status: Unchecked
-      - offset: 2534
-        length: 92
+        status: Solved
+      - offset: 3320
+        length: 1072
         placeholder_text: "...  # TODO Реализуйте код загрузки данных с файла. Помните\
       , что файла может не существовать"
         initial_state:
@@ -129,10 +129,10 @@ files:
                       print("Файл с задачами не найден. Будет создан новый.")
                   except Exception as e:
                       print(f"Ошибка при загрузке файла: {e}")
-        selected: false
-        status: Unchecked
-      - offset: 2821
-        length: 25
+        selected: true
+        status: Solved
+      - offset: 4587
+        length: 134
         placeholder_text: "... # TODO Реализуйте код"
         initial_state:
           length: 25
@@ -142,10 +142,10 @@ files:
           self.tasks.append(task)
                   self.save_to_file()
                   print(f"Задача добавлена: {task.title}")
-        selected: false
-        status: Unchecked
-      - offset: 3030
-        length: 25
+        selected: true
+        status: Solved
+      - offset: 4905
+        length: 402
         placeholder_text: "... # TODO Реализуйте код"
         initial_state:
           length: 25
@@ -159,10 +159,10 @@ files:
                   print("\nВаш список задач:")
                   for i, task in enumerate(self.tasks, 1):
                       print(f"{i}. {task}")
-        selected: false
-        status: Unchecked
-      - offset: 3348
-        length: 25
+        selected: true
+        status: Solved
+      - offset: 5600
+        length: 487
         placeholder_text: "... # TODO Реализуйте код"
         initial_state:
           length: 25
@@ -176,10 +176,10 @@ files:
                   task.mark_as_done()
                   self.save_to_file()
                   print(f"Задача отмечена как выполненная: {task.title}")
-        selected: false
-        status: Unchecked
-      - offset: 3656
-        length: 25
+        selected: true
+        status: Solved
+      - offset: 6370
+        length: 324
         placeholder_text: "... # TODO Реализуйте код"
         initial_state:
           length: 25
@@ -192,10 +192,10 @@ files:
                   task = self.tasks.pop(index - 1)
                   self.save_to_file()
                   print(f"Задача удалена: {task.title}")
-        selected: false
-        status: Unchecked
-      - offset: 4324
-        length: 93
+        selected: true
+        status: Solved
+      - offset: 7392
+        length: 275
         placeholder_text: "... # TODO Реализуйте логику добавления объекта задачи в об\
       ъект todo (объект менеджера задач)"
         initial_state:
@@ -208,10 +208,10 @@ files:
                           todo.add_task(task)
                       except ValueError as e:
                           print(f"Ошибка: {e}")
-        selected: false
-        status: Unchecked
-      - offset: 4489
-        length: 33
+        selected: true
+        status: Solved
+      - offset: 7739
+        length: 476
         placeholder_text: "...  # TODO Реализуйте функционал"
         initial_state:
           length: 33
@@ -224,10 +224,10 @@ files:
                           todo.mark_task_done(index)
                       except (ValueError, IndexError) as e:
                           print(f"Ошибка: {e}")
-        selected: false
-        status: Unchecked
-      - offset: 4581
-        length: 33
+        selected: true
+        status: Solved
+      - offset: 8274
+        length: 459
         placeholder_text: "...  # TODO Реализуйте функционал"
         initial_state:
           length: 33
@@ -240,8 +240,8 @@ files:
                           todo.remove_task(index)
                       except (ValueError, IndexError) as e:
                           print(f"Ошибка: {e}")
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: tests/test_task.py
     visible: false
@@ -252,5 +252,11 @@ files:
   - name: tests/__init__.py
     visible: false
     learner_created: false
-status: Unchecked
+  - name: tasks.json
+    visible: true
+    learner_created: true
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 13 May 2026 09:00:59 UTC"
 record: -1

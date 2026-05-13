@@ -7,7 +7,15 @@ class Book:
 
     def __repr__(self):
         # TODO сделайте так, чтобы __repr__ сам подстраивался под атрибуты что есть у него в классе
+        data = []
 
+        for key, item in self.__dict__.items():
+            # key = name item = Война и мир
+            #       page        960
+            #       year        1867
+            data.append(f"{key}={item!r}")
+
+        return f"{self.__class__.__name__}({', '.join(data)})"
 
 class EBook(Book):
     def __init__(self, name, page, year, size):

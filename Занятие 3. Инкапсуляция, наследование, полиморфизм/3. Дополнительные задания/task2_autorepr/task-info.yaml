@@ -16,8 +16,8 @@ files:
                   for attr, value in self.__dict__.items():
                       data += attr + '=' + repr(value) + ', '
                   return data[:-2] + ')'
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: __init__.py
     visible: false
@@ -28,5 +28,8 @@ files:
   - name: tests/input.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 13 May 2026 08:06:11 UTC"
 record: -1

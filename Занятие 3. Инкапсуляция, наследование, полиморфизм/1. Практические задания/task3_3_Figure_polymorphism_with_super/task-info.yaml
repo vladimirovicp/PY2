@@ -12,7 +12,7 @@ files:
           offset: 388
         initialized_from_dependency: false
         encrypted_possible_answer: super().area()
-        selected: false
+        selected: true
         status: Solved
     learner_created: false
   - name: __init__.py
@@ -24,5 +24,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 12 May 2026 14:21:49 UTC"
+  time: "Tue, 12 May 2026 12:51:37 UTC"
 record: -1

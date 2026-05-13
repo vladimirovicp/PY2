@@ -5,7 +5,6 @@ class Room:
     """
     Базовый класс для номеров в отеле
     """
-    ...
 
 
 class SingleRoom:

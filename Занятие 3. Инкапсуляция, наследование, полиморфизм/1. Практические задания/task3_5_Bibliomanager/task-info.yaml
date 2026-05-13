@@ -3,8 +3,8 @@ files:
   - name: main.py
     visible: true
     placeholders:
-      - offset: 766
-        length: 142
+      - offset: 774
+        length: 2562
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
           length: 31
@@ -13,10 +13,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(title, str):
                       return TypeError()
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1075
-        length: 157
+      - offset: 3503
+        length: 31
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
           length: 31
@@ -25,10 +25,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(author, (str, type(None))):
                       return TypeError()
-        selected: true
+        selected: false
         status: Solved
-      - offset: 1471
-        length: 276
+      - offset: 3773
+        length: 31
         placeholder_text: "...  # TODO реализуйте проверку"
         initial_state:
           length: 31
@@ -39,9 +39,9 @@ files:
                       return TypeError()
                   if not year > 0:
                       return ValueError()
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2234
+      - offset: 4291
         length: 115
         placeholder_text: "# TODO добавьте свойство is_checked_out (на чтение). Возвра\
       щает \"Выдано\" если is_checked_out=True, иначе \"Доступно\""
@@ -53,10 +53,10 @@ files:
           @property
               def is_checked_out(self):
                   return "Выдано" if self.__is_checked_out else "Доступно"
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2487
-        length: 105
+      - offset: 4412
+        length: 42
         placeholder_text: "# TODO добавьте свойство title (на чтение)"
         initial_state:
           length: 42
@@ -66,10 +66,10 @@ files:
           @property
               def title(self):
                   return self.__title
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2598
-        length: 108
+      - offset: 4460
+        length: 43
         placeholder_text: "# TODO добавьте свойство author (на чтение)"
         initial_state:
           length: 43
@@ -79,10 +79,10 @@ files:
           @property
               def author(self):
                   return self.__author
-        selected: true
+        selected: false
         status: Solved
-      - offset: 2712
-        length: 139
+      - offset: 4509
+        length: 53
         placeholder_text: "# TODO добавьте свойство publication_year (на чтение)"
         initial_state:
           length: 53
@@ -92,9 +92,9 @@ files:
           @property
               def publication_year(self):
                   return self.__publication_year
-        selected: true
+        selected: false
         status: Solved
-      - offset: 3241
+      - offset: 4952
         length: 137
         placeholder_text: "# TODO Инициализируйте переменные от LibraryItem и добавьте\
       \ новый приватный атрибут genre. Не забудьте, что нужна валидация перед запи\
@@ -109,8 +109,8 @@ files:
                   self.__genre = genre
         selected: false
         status: Solved
-      - offset: 3658
-        length: 139
+      - offset: 5245
+        length: 36
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -119,10 +119,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(genre, str):
                       raise TypeError()
-        selected: true
+        selected: false
         status: Solved
-      - offset: 3803
-        length: 106
+      - offset: 5287
+        length: 42
         placeholder_text: "# TODO добавьте свойство genre (на чтение)"
         initial_state:
           length: 42
@@ -132,9 +132,9 @@ files:
           @property
               def genre(self):
                   return self.__genre
-        selected: true
+        selected: false
         status: Solved
-      - offset: 3915
+      - offset: 5335
         length: 179
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для книги (Книга: 'Название книги',  Автор: 'Кто напис\
@@ -148,8 +148,8 @@ files:
                   return f"Книга: '{self.title}', Автор: {self.author}, Жанр: {self.genre}, Год издания: {self.publication_year}"
         selected: false
         status: Solved
-      - offset: 4441
-        length: 144
+      - offset: 5718
+        length: 148
         placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
       вьте новый приватный атрибут issue_number. Не забудьте, что нужна валидация\
       \ перед записью"
@@ -161,10 +161,10 @@ files:
           super().__init__(title=title, publication_year=publication_year)
                   self.__validate_issue_number(issue_number)
                   self.__issue_number = issue_number
-        selected: true
+        selected: false
         status: Solved
-      - offset: 4906
-        length: 152
+      - offset: 6036
+        length: 36
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -173,10 +173,10 @@ files:
         encrypted_possible_answer: |-
           if not isinstance(issue_number, int):
                       raise TypeError()
-        selected: true
+        selected: false
         status: Solved
-      - offset: 5064
-        length: 127
+      - offset: 6078
+        length: 49
         placeholder_text: "# TODO добавьте свойство issue_number (на чтение)"
         initial_state:
           length: 49
@@ -186,9 +186,9 @@ files:
           @property
               def issue_number(self):
                   return self.__issue_number
-        selected: true
+        selected: false
         status: Solved
-      - offset: 5197
+      - offset: 6133
         length: 166
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для журнала (Журнал: 'Название журнала',  Номер выпуск\
@@ -200,10 +200,10 @@ files:
         encrypted_possible_answer: |-
           def get_info(self):
                   return f"Журнал: '{self.title}', Номер выпуска: {self.issue_number}, Год издания: {self.publication_year}"
-        selected: true
+        selected: false
         status: Solved
-      - offset: 5575
-        length: 148
+      - offset: 6373
+        length: 152
         placeholder_text: "... # TODO Инициализируйте переменные от LibraryItem и доба\
       вьте новый приватный атрибут publication_date. Не забудьте, что нужна валида\
       ция перед записью"
@@ -216,10 +216,10 @@ files:
                   super().__init__(title=title, publication_year=publication_year)
                   self.__validate_publication_date(publication_date)
                   self.__publication_date = publication_date
-        selected: true
+        selected: false
         status: Solved
-      - offset: 6458
-        length: 345
+      - offset: 6995
+        length: 36
         placeholder_text: "...  # TODO написать метод валидации"
         initial_state:
           length: 36
@@ -231,10 +231,10 @@ files:
                   if not len(date := publication_date.split('.')) == 3:
                       raise ValueError()
                   datetime.date(day=int(date[0]), month=int(date[1]), year=int(date[2]))
-        selected: true
+        selected: false
         status: Solved
-      - offset: 6809
-        length: 139
+      - offset: 7037
+        length: 53
         placeholder_text: "# TODO добавьте свойство publication_date (на чтение)"
         initial_state:
           length: 53
@@ -244,9 +244,9 @@ files:
           @property
               def publication_date(self):
                   return self.__publication_date
-        selected: true
+        selected: false
         status: Solved
-      - offset: 6954
+      - offset: 7096
         length: 162
         placeholder_text: "# TODO  переопределите метод get_info, чтобы он отображал и\
       нформацию специфичную для газеты (Газета: 'Название газеты',  Дата выпуска:\
@@ -276,5 +276,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 12 May 2026 17:51:04 UTC"
+  time: "Wed, 13 May 2026 06:32:38 UTC"
 record: -1

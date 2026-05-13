@@ -16,8 +16,13 @@ class Role:
 
     def has_permission(self, action: str) -> bool:
         """Проверяет, есть ли у роли разрешение на конкретное действие."""
-        ...  # TODO  self.permissions это словарь с разрешениями на действия (action) проверьте есть ли соответствующее разрешение на действие
+        # TODO  self.permissions это словарь с разрешениями на действия (action) проверьте есть ли соответствующее разрешение на действие
 
+        if action in self.permissions:
+            return True
+        return False
+
+        # return self.permissions.get(action, False)
 
 class User:
     """Класс, представляющий пользователя."""
@@ -34,7 +39,12 @@ class User:
         Если такое разрешение есть, то возвращает пароль,
         если нет, то вызывает ошибку PermissionError
         """
-        ...  # TODO Проверьте есть ли у пользователя право на просмотр пароля, это действие называется 'view_password'. У атрибута role проверьте метод has_permission. Если такое разрешение есть, то верните пароль, если нет то вызовите ошибку PermissionError
+        # TODO Проверьте есть ли у пользователя право на просмотр пароля, это действие называется 'view_password'.
+        #  У атрибута role проверьте метод has_permission. Если такое разрешение есть, то верните пароль, если нет то вызовите ошибку PermissionError
+
+        if not self.role.has_permission('view_password'):
+            raise PermissionError('К вас нет прав на чтение')
+        return self.__password
 
     def get_address(self) -> str:
         """
@@ -42,8 +52,13 @@ class User:
         Если такое разрешение есть, то возвращает адрес,
         если нет, то вызывает ошибку PermissionError
         """
-        ...  # TODO Произведите аналогичные манипуляции как и в методе get_password только для разрешения 'view_address'
+        # TODO Произведите аналогичные манипуляции как и в методе get_password только для разрешения 'view_address'
 
+        # password = self.get_password()
+
+        if not self.role.has_permission('view_address'):
+            raise PermissionError('У вас нет прав на чтение')
+        return self.__address
 
 if __name__ == "__main__":
     # Настройка прав
